@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project Jupyter | JupyterLab</title>
+    <meta property="og:title" content="Project Jupyter" />
+    <meta property="og:description" content="The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations, interactive dashboards and other media.
+">
+    <meta property="og:url" content="http://www.jupyter.org" />
+    <meta property="og:image" content="http://jupyter.org/assets/homepage.png" />
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/logo-nav.css">
+    <link rel="stylesheet" href="/css/documentation.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/morphext.css">
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="/assets/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="/assets/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="/assets/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <link href="/assets/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/assets/icon-hires.png" rel="icon" sizes="192x192" />
+    <link href="/assets/icon-normal.png" rel="icon" sizes="128x128" />
+    <link rel="canonical" href="http://jupyter.org/jupyterlab.html">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="//use.typekit.net/kpd5yrh.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-52617120-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script>console.log('Welcome to Project Jupyter! Explore the various tools available and their corresponding documentation. If you are interested in contributing to the platform, please visit the community resources section at http://jupyter.org/community.html.')</script>
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top " role="navigation" id="navbar" >
+        <div class="navbar-inner">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    
+                </button>
+                <a class="navbar-brand" href="/index.html">
+                    <img id="jupyter-nav-logo" class="navbar-logo" src="/assets/nav-logo-white-type.svg" alt="Jupyter logo">
+                </a>
+            </div>
+            <div class="blur"></div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right transparent-nav">
+                    
+                      
+                        
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                              
+                               <li>
+                                   <a href="/install.html" class="tab">Install</a>
+                               </li>
+                               
+                           
+                           
+                           
+                           
+                           
+                           
+                      
+                    
+                      
+                        
+                           
+                              
+                               <li>
+                                   <a href="/about.html" class="tab">About</a>
+                               </li>
+                               
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                      
+                    
+                      
+                        
+                           
+                           
+                           
+                              
+                               <li>
+                                   <a href="/community.html" class="tab">Resources</a>
+                               </li>
+                               
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                      
+                    
+                      
+                        
+                           
+                           
+                           
+                           
+                           
+                              
+                               <li>
+                                   <a href="/documentation.html" class="tab">Documentation</a>
+                               </li>
+                               
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                      
+                    
+                      
+                           <li>
+                             <a href="https://nbviewer.jupyter.org" class="tab" target="_blank">NBViewer</a>
+                           </li>
+                      
+                    
+                      
+                        
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                              
+                               <li>
+                                   <a href="/widgets.html" class="tab">Widgets</a>
+                               </li>
+                               
+                           
+                           
+                      
+                    
+                      
+                           <li>
+                             <a href="https://blog.jupyter.org" class="tab" target="_blank">Blog</a>
+                           </li>
+                      
+                    
+                      
+                        
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                              
+                               <li>
+                                   <a href="/donate.html" class="tab">Donate</a>
+                               </li>
+                               
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                      
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </div>
+</nav>
+
+    <section>
+    <section>
+    <div class="header lab-jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 lab-header">
+                    <img class="lab-header-logo" src="./assets/JupyterLabLogo-withPlanet-inverse.svg"/>
+                    <h2 class="lab-header-title">The Complete Workspace</h2>
+                    <p class="lab-header-subhead">for writing code, analyzing data, and sharing results.</p>
+                </div>
+                <div>
+                    <div class="lab-loading-screen">
+                        <div id="universe">
+                            <div id="galaxy">
+                                <div id="main-logo">
+                                </div>
+                                <div id="moon1" class="moon orbit">
+                                    <div class="planet"></div>
+                                </div>
+                                <div id="moon2" class="moon orbit">
+                                    <div class="planet"></div>
+                                </div>
+                                <div id="moon3" class="moon orbit">
+                                    <div class="planet"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lab-loading-screen-bg"></div>
+                    <img src="assets/jupyterlab-page/lab-header-preview.png" id="lab-header-preview"/>
+                </div>
+            </div>
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+        </div>
+    </div>
+</section>
+<div class="lab-content-wrapper">
+    <section>
+        <div class="section-white top-section-border lab-overview">
+            <div class="container">
+                <div class="row">
+                    <a class="orange-button" href="https://github.com/jupyterlab/jupyterlab">Download from GitHub</a>
+                    <div class="col-sm-12 lab-overview-desc">
+                        <h4>JupyterLab was created to be the all-in-one workspace for data science, scientific computing, and analytical research. It provides the power, speed and flexibility to get more work done.</h4>
+                    </div>
+                    <ul class="lab-overview-features">
+                        <li class="col-xs-12 col-sm-4 lab-overview-feature">
+                            <img src="./assets/jupyterlab-page/jupyterlab-everyone-icon.svg"/>
+                            <h5 class="lab-overview-feature-title">Made for everyone</h5>
+                        </li>
+                        <li class="col-xs-12 col-sm-4 lab-overview-feature">
+                            <img src="./assets/jupyterlab-page/jupyterlab-extensible-icon.svg"/>
+                            <h5 class="lab-overview-feature-title">Extensible</h5>
+                        </li>
+                        <li class="col-xs-12 col-sm-4 lab-overview-feature">
+                            <img src="./assets/jupyterlab-page/jupyterlab-customize-icon.svg"/>
+                            <h5 class="lab-overview-feature-title">Customizable</h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="section-grey lab-dockpanel">
+            <div class="container">
+                <div class="row lab-dockpanel-overview">
+                    <div class="col-xs-12 col-sm-5 lab-dockpanel-header">
+                        <img src="./assets/jupyterlab-page/jupyterlab-dockpanel-head-img.svg"/>
+                        <h3 class="section-header section-header-left">Dockpanel</h3>
+                        <h5 class="lab-dockpanel-desc">In JupyterLab, everything you do is held in one place: the dockpanel.</h5>
+                        <h5 class="lab-dockpanel-desc">Drag and drop documents to customize your workspace to make it the best for what you do.</h5>
+                        <h5 class="lab-dockpanel-desc">Need to pick up where you last started?
+                            No problem, JupyterLab and the dockpanel remember your previous session to get you up and running from launch.
+                        </h5>
+                    </div>
+                    <div class="col-xs-12 col-sm-7">
+                        <img id="lab-dockpanel-img" src="./assets/jupyterlab-page/jupyterlab-dockpanel-img.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="section-dark-grey">
+            <div class="container">
+                <div class="row">
+                    <img src="./assets/jupyterlab-page/jupyterlab-extentions-section-icon.svg" class="section-icon img-responsive"/>
+                    <h3 class="col-sm-12 section-header">Extensions</h3>
+                    <p class="col-sm-12 support-paragraph">Extensions are the easiest way to tailor the JupyterLab experience. Find new extensions
+                    through the open source community or even build your own. JupyterLab includes a variety of extensions so that you can hit the ground running.</p>
+                    <div class="lab-ext-preview-viewer col-sm-12">
+                        <div class="lab-ext-preview">
+                            <div id="tab-1" class="lab-ext-preview-content ext-active">
+                                <img src="./assets/jupyterlab-page/extensions/file-browser-preview.png" class="lab-ext-preview-img">
+                                <div class="lab-ext-preview-about">
+                                    <div class="lab-ext-preview-about-head">
+                                        <img src="./assets/jupyterlab-page/extensions/file-browser-icon.svg" class="lab-ext-preview-about-icon"/>
+                                        <h4 class="lab-ext-preview-about-title">File Browser</h4>
+                                    </div>
+                                    <h5 class="lab-ext-preview-about-desc">Organizing and accessing your files has never been easier. Quickly find files, see running notebooks, and distinguish between different file types at a glance.</h5>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="lab-ext-preview-content">
+                                <img src="./assets/jupyterlab-page/extensions/git-plugin-preview.png" class="lab-ext-preview-img">
+                                <div class="lab-ext-preview-about">
+                                    <div class="lab-ext-preview-about-head">
+                                        <img src="./assets/jupyterlab-page/extensions/git-icon.svg" class="lab-ext-preview-about-icon"/>
+                                        <h4 class="lab-ext-preview-about-title">Git</h4>
+                                    </div>
+                                    <h5 class="lab-ext-preview-about-desc">Version control done right. The Git plugin for JupyterLab provides an easy to use interface to help you interact with your latest changes. Navigate to repos through the built-in file browser and the Git plugin will do the rest!</h5>
+                                </div>
+                            </div>
+                            <div id="tab-3" class="lab-ext-preview-content">
+                                <img src="./assets/jupyterlab-page/extensions/command-pallete-preview.png" class="lab-ext-preview-img">
+                                <div class="lab-ext-preview-about">
+                                    <div class="lab-ext-preview-about-head">
+                                        <img src="./assets/jupyterlab-page/extensions/command-pallete-icon.svg" class="lab-ext-preview-about-icon"/>
+                                        <h4 class="lab-ext-preview-about-title">Command Pallete</h4>
+                                    </div>
+                                    <h5 class="lab-ext-preview-about-desc">Take control of your development environment. The command pallete was built to help you find what you need. Open applications, access shortcuts, and much more.</h5>
+                                </div>
+                            </div>
+                            <div id="tab-4" class="lab-ext-preview-content">
+                                <img src="./assets/jupyterlab-page/extensions/running-sessions-preview.png" class="lab-ext-preview-img">
+                                <div class="lab-ext-preview-about">
+                                    <div class="lab-ext-preview-about-head">
+                                        <img src="./assets/jupyterlab-page/extensions/running-icon.svg" class="lab-ext-preview-about-icon"/>
+                                        <h4 class="lab-ext-preview-about-title">Running Sessions</h4>
+                                    </div>
+                                    <h5 class="lab-ext-preview-about-desc">Convienently access all current running sessions in the dockpanel. Quick access to kernel shutdown makes it easy to take control of your working environment.</h5>
+                                </div>
+                            </div>
+                            <div id="tab-5" class="lab-ext-preview-content">
+                                <img src="./assets/jupyterlab-page/extensions/cell-tools-preview.png" class="lab-ext-preview-img">
+                                <div class="lab-ext-preview-about">
+                                    <div class="lab-ext-preview-about-head">
+                                        <img src="./assets/jupyterlab-page/extensions/cell-tools-icon.svg" class="lab-ext-preview-about-icon"/>
+                                        <h4 class="lab-ext-preview-about-title">Cell Tools</h4>
+                                    </div>
+                                    <h5 class="lab-ext-preview-about-desc">Organizing and accessing your files has never been easier. Quickly find files, see running notebooks, and distinguish between different file types at a glance.</h5>
+                                </div>
+                            </div>
+                            <div id="tab-6" class="lab-ext-preview-content">
+                                <img src="./assets/jupyterlab-page/extensions/tab-manager-preview.png" class="lab-ext-preview-img">
+                                <div class="lab-ext-preview-about">
+                                    <div class="lab-ext-preview-about-head">
+                                        <img src="./assets/jupyterlab-page/extensions/tab-manager-icon.svg" class="lab-ext-preview-about-icon"/>
+                                        <h4 class="lab-ext-preview-about-title">Tab Manager</h4>
+                                    </div>
+                                    <h5 class="lab-ext-preview-about-desc">Organizing and accessing your files has never been easier. Quickly find files, see running notebooks, and distinguish between different file types at a glance.</h5>
+                                </div>
+                            </div>
+                            <div id="tab-7" class="lab-ext-preview-content">
+                                <img src="./assets/jupyterlab-page/extensions/launcher-preview.png" class="lab-ext-preview-img">
+                                <div class="lab-ext-preview-about">
+                                    <div class="lab-ext-preview-about-head">
+                                        <img src="./assets/jupyterlab-page/extensions/launcher-icon.svg" class="lab-ext-preview-about-icon"/>
+                                        <h4 class="lab-ext-preview-about-title">Launcher</h4>
+                                    </div>
+                                    <h5 class="lab-ext-preview-about-desc">Organizing and accessing your files has never been easier. Quickly find files, see running notebooks, and distinguish between different file types at a glance.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lab-ext-preview-nav">
+                            <div data-tab="tab-1" class="lab-ext-preview-nav-item nav-active">
+                                <img class="lab-ext-preview-nav-item-icon" src="./assets/jupyterlab-page/extensions/file-browser-icon.svg"/>
+                                <p class="lab-ext-preview-nav-item-title">File Browser</p>
+                            </div>
+                            <div data-tab="tab-2" class="lab-ext-preview-nav-item">
+                                <img class="lab-ext-preview-nav-item-icon" src="./assets/jupyterlab-page/extensions/git-icon.svg"/>
+                                <p class="lab-ext-preview-nav-item-title">Git</p>
+                            </div>
+                            <div data-tab="tab-3" class="lab-ext-preview-nav-item">
+                                <img class="lab-ext-preview-nav-item-icon" src="./assets/jupyterlab-page/extensions/command-pallete-icon.svg"/>
+                                <p class="lab-ext-preview-nav-item-title">Command Pallete</p>
+                            </div>
+                            <div data-tab="tab-4" class="lab-ext-preview-nav-item">
+                                <img class="lab-ext-preview-nav-item-icon" src="./assets/jupyterlab-page/extensions/running-icon.svg"/>
+                                <p class="lab-ext-preview-nav-item-title">Running</p>
+                            </div>
+                            <div data-tab="tab-5" class="lab-ext-preview-nav-item">
+                                <img class="lab-ext-preview-nav-item-icon" src="./assets/jupyterlab-page/extensions/cell-tools-icon.svg"/>
+                                <p class="lab-ext-preview-nav-item-title">Cell Tools</p>
+                            </div>
+                            <div data-tab="tab-6" class="lab-ext-preview-nav-item">
+                                <img class="lab-ext-preview-nav-item-icon" src="./assets/jupyterlab-page/extensions/tab-manager-icon.svg"/>
+                                <p class="lab-ext-preview-nav-item-title">Tab Manager</p>
+                            </div>
+                            <div data-tab="tab-7" class="lab-ext-preview-nav-item">
+                                <img class="lab-ext-preview-nav-item-icon" src="./assets/jupyterlab-page/extensions/launcher-icon.svg"/>
+                                <p class="lab-ext-preview-nav-item-title">Launcher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="lab-notebook-parallax" data-parallax="scroll" data-image-src="./assets/jupyterlab-page/jupyterlab-space-bg.jpg" data-natural-width="1200" data-natural-height="800" data-bleed="100" class="section-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="lab-notebook-paper">
+                            <img src="./assets/jupyterlab-page/book_running.svg" class="lab-notebook-logo"/>
+                            <h3>A better notebook experience.</h2>
+                            <div class="lab-notebook-cell">
+                                <h4 class="lab-notebook-cell-prompt">In [<span class="lab-notebook-cell-prompt-number"> </span>]:</h4>
+                                <div class="lab-notebook-cell-input">
+                                    <p class="lab-notebook-cell-input-text">showFeatures()</p>
+                                </div>
+                            </div>
+                            <div class="lab-notebook-cell-output">
+                                <h4 class="lab-notebook-cell-output-text">Edit multiple notebooks at once</h4>
+                                <h4 class="lab-notebook-cell-output-text">Cell drag and drop</h4>
+                                <h4 class="lab-notebook-cell-output-text">Cell collapsing</h4>
+                                <h4 class="lab-notebook-cell-output-text">Vega & Vega-Lite integration</h4>
+                                <h4 class="lab-notebook-cell-output-text">Speed improvements</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="section-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="lab-features-header">Even more features</h3>
+                        <div class="lab-features-card-container">
+                            <div class="lab-feature-card">
+                                <div class="lab-feature-card-header code-console">
+                                    <img src="./assets/jupyterlab-page/more-features/code-console-card-icon.svg" class="lab-feature-card-icon"/>
+                                </div>
+                                <div class="lab-feature-card-text">
+                                    <h4>Code Console</h4>
+                                    <p>A scratchpad for code that makes data visualizations interactive</p>
+                                </div>
+                            </div>
+                            <div class="lab-feature-card">
+                                <div class="lab-feature-card-header terminal">
+                                    <img src="./assets/jupyterlab-page/more-features/terminal-card-icon.svg" class="lab-feature-card-icon"/>
+                                </div>
+                                <div class="lab-feature-card-text">
+                                    <h4>Built-in Terminal</h4>
+                                    <p>A scratchpad for code that makes data visualizations interactive</p>
+                                </div>
+                            </div>
+                            <div class="lab-feature-card">
+                                <div class="lab-feature-card-header text-editor">
+                                    <img src="./assets/jupyterlab-page/more-features/text-editor-card-icon.svg" class="lab-feature-card-icon"/>
+                                </div>
+                                <div class="lab-feature-card-text">
+                                    <h4>Built-in Text Editor</h4>
+                                    <p>A scratchpad for code that makes data visualizations interactive</p>
+                                </div>
+                            </div>
+                            <div class="lab-feature-card">
+                                <div class="lab-feature-card-header themeable">
+                                    <img src="./assets/jupyterlab-page/more-features/themeable-card-icon.svg" class="lab-feature-card-icon"/>
+                                </div>
+                                <div class="lab-feature-card-text">
+                                    <h4>Themeable</h4>
+                                    <p>A scratchpad for code that makes data visualizations interactive</p>
+                                </div>
+                            </div>
+                            <div class="lab-feature-card">
+                                <div class="lab-feature-card-header csv">
+                                    <img src="./assets/jupyterlab-page/more-features/csv-viewer-card-icon.svg" class="lab-feature-card-icon"/>
+                                </div>
+                                <div class="lab-feature-card-text">
+                                    <h4>CSV Viewer</h4>
+                                    <p>A scratchpad for code that makes data visualizations interactive</p>
+                                </div>
+                            </div>
+                            <div class="lab-feature-card">
+                                <div class="lab-feature-card-header img-viewer">
+                                    <img src="./assets/jupyterlab-page/more-features/image-viewer-card-icon.svg" class="lab-feature-card-icon"/>
+                                </div>
+                                <div class="lab-feature-card-text">
+                                    <h4>Image Viewer</h4>
+                                    <p>A scratchpad for code that makes data visualizations interactive</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="section-white">
+            <div class="container">
+                <div class="row">
+                    <div id="collab-preview-tab-1" class="col-sm-6 lab-collab-preview preview-active">
+                        <img class="lab-collab-preview-img img-responsive" src="./assets/jupyterlab-page/collaboration/share-files.png"/>
+                        <p class="lab-collab-preview-text">Share documents through JupyterLab’s Google Drive extension</p>
+                    </div>
+                    <div id="collab-preview-tab-2" class="col-sm-6 lab-collab-preview">
+                        <img src="./assets/jupyterlab-page/collaboration/realtime-image-mobile.svg" class="lab-collab-realtime-img-mobile img-responsive"/>
+                        <h4 id="typeout-cell-1" class="lab-collab-cell-text lab-collab-cell-1-text"></h4>
+                        <h4 id="typeout-cell-2" class="lab-collab-cell-text lab-collab-cell-2-text"></h4>
+                        <img src="./assets/jupyterlab-page/collaboration/cell-output.svg" class="lab-collab-cell-output"/>
+                        <img id="collab-preview-tab-2-img" class="lab-collab-preview-img img-responsive" src="./assets/jupyterlab-page/collaboration/realtime-edit.svg"/>
+                        <p class="lab-collab-preview-text">Work with others in real-time through JupyterLab no matter where you are</p>
+                    </div>
+                    <div id="collab-preview-tab-3" class="col-sm-6 lab-collab-preview">
+                        <img src="./assets/jupyterlab-page/collaboration/chat/chat-img-mobile.svg" class="lab-collab-chat-img-mobile img-responsive"/>
+                        <div class="lab-collab-chat-img-container">
+                            <div id="lab-collab-chat-entry-1" class="lab-collab-chat-entry">
+                                <h4 id="typeout-chat-1" class="lab-collab-chat-text lab-collab-chat-text-1">Do you have access<br/>to yesterday's data?</h4>
+                                <img class="lab-collab-chat-entry-bubble-1" src="assets/jupyterlab-page/collaboration/chat/person-1-bubble.svg"/>
+                                <img class="lab-collab-chat-entry-circle-1" src="./assets/jupyterlab-page/collaboration/chat/person-1-circle.svg"/>
+                            </div>
+                            <div id="lab-collab-chat-entry-2" class="lab-collab-chat-entry">
+                                <h4 id="typeout-chat-2" class="lab-collab-chat-text lab-collab-chat-text-2"></h4>
+                                <img class="lab-collab-chat-entry-circle-2" src="./assets/jupyterlab-page/collaboration/chat/person-2-circle.svg"/>
+                                <img class="lab-collab-chat-entry-bubble-2" src="./assets/jupyterlab-page/collaboration/chat/person-2-bubble.svg"/>
+                            </div>
+                        </div>
+                        <p class="lab-collab-preview-text">Chat with other contributors that are working on any document within JupyterLab</p>
+                    </div>
+                    <div id="lab-collab-about" class="col-sm-6">
+                        <div id="lab-collab-about-section-header">
+                            <h3 class="section-header section-header-left">Real-time<br/> collaboration</h3>
+                            <h5 class="lab-collab-about-desc">Create something great together using the built-in Google Drive extension and chat application</h5>
+                            <span class="lab-collab-coming-soon">COMING SOON</span>
+                        </div>
+                        <ul class="lab-collab-preview-nav">
+                            <li data-tab="tab-1" class="lab-collab-preview-nav-item nav-active">Share files through Google Drive</li>
+                            <li data-tab="tab-2" class="lab-collab-preview-nav-item">Work in real-time with others</li>
+                            <li data-tab="tab-3" class="lab-collab-preview-nav-item">Per-document chat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="section-grey">
+            <div class="container-fluid lab-native">
+                <div class="row">
+                    <div class="col-sm-12 lab-native-header">
+                        <img src="./assets/jupyterlab-page/lab-native-logo.png" class="section-icon img-responsive"/>
+                        <h3 class="col-sm-12 section-header">JupyterLab Native</h3>
+                        <p class="col-sm-12 support-paragraph">A desktop application that unlocks a galaxy of possibilities.</p>
+                        <div class="lab-native-laptop">
+                            <video id="lab-native-lorenz-vid" src="./assets/jupyterlab-page/lab-native/lorenz-animation.mp4"></video>
+                            <img class="lab-native-img img-responsive" src="./assets/jupyterlab-page/lab-native-desktop-preview.png"/>
+                        </div>
+                    </div>
+                    <div class="lab-native-features">
+                        <div class="col-sm-4 lab-native-feature">
+                            <img src="./assets/jupyterlab-page/lab-native-platform-img.svg" class="lab-native-feature-img"/>
+                            <h4 class="lab-native-feature-header">Cross Platform</h4>
+                            <p class="lab-native-feature-desc">JupyterLab Native is built to run natively on Mac, Windows, and Linux</p>
+                        </div>
+                        <div class="col-sm-4 lab-native-feature">
+                            <img src="./assets/jupyterlab-page/lab-native-server-img.svg" class="lab-native-feature-img"/>
+                            <h4 class="lab-native-feature-header">Server Management</h4>
+                            <p class="lab-native-feature-desc">Easily connect and manage your servers with the built-in server manager</p>
+                        </div>
+                        <div class="col-sm-4 lab-native-feature">
+                            <img src="./assets/jupyterlab-page/lab-native-space-img.svg" class="lab-native-feature-img"/>
+                            <h4 class="lab-native-feature-header">More work space</h4>
+                            <p class="lab-native-feature-desc">No browser? No problem. By using the native application, there is more room for your content</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 lab-native-download">
+                        <a class="orange-button lab-native-download-btn" href="https://github.com/jupyterlab/jupyterlab_app" target="_blank">Download from GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    </section>
+
+    <footer>
+    <div class="footer" role="navigation">
+        <div class="container">
+            <div class="navbar-text">
+                <ul class="footer-text">
+                    <li><a href="/index.html">Home</a></li>
+                    
+                      
+                        
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                               <li><a href="/install.html">Install</a></li>
+                           
+                           
+                           
+                           
+                           
+                           
+                      
+                    
+                      
+                        
+                           
+                               <li><a href="/about.html">About</a></li>
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                      
+                    
+                      
+                        
+                           
+                           
+                           
+                               <li><a href="/community.html">Resources</a></li>
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                      
+                    
+                      
+                        
+                           
+                           
+                           
+                           
+                           
+                               <li><a href="/documentation.html">Documentation</a></li>
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                      
+                    
+                      
+                           <li><a href="https://nbviewer.jupyter.org" target="_blank">NBViewer</a></li>
+                      
+                    
+                      
+                        
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                               <li><a href="/widgets.html">Widgets</a></li>
+                           
+                           
+                      
+                    
+                      
+                           <li><a href="https://blog.jupyter.org" target="_blank">Blog</a></li>
+                      
+                    
+                      
+                        
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                               <li><a href="/donate.html">Donate</a></li>
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                      
+                    
+                    <!--2017-08-07 19:33:54 -0700-->
+                </ul>
+                <p>Copyright © 2017  Project Jupyter - Last updated Mon, Aug 07, 2017</p>
+            </div>
+            <div class="follow">
+                <a class="github-button" href="https://github.com/jupyter" aria-label="Follow @jupyter on GitHub">Follow @jupyter</a>
+                <br><a href="https://twitter.com/ProjectJupyter" class="twitter-follow-button" data-show-count="false">Follow @ProjectJupyter</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+    <script src="/js/scroll.js"></script>
+    
+    
+    <script src="/js/parallax.min.js"></script>
+    <script src="/js/scrollreveal.min.js"></script>
+    <script src="/js/jquery.typist.js"></script>
+    <script src="/js/jupyterlab.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+  </body>
+
+</html>
